@@ -1,0 +1,12 @@
+.title{
+    background-color: red;
+}
+img{
+    width: 20%;
+}
+.description, .title{
+    line-height: 3px;
+}
+header{
+    display: flex;
+}

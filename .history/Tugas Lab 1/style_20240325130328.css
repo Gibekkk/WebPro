@@ -1,0 +1,14 @@
+.title{
+    background-color: red;
+    text-align: center;
+}
+img{
+    width: 20%;
+}
+.text{
+    line-height: 3px;
+}
+header{
+    display: inlineflex;
+    width: 100%;
+}
