@@ -3,7 +3,7 @@
 }
 .container{
     width: 85%;
-    margin: auto;
+    margin: 30px auto;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.438);
     background-color: white;
 } */
@@ -77,10 +77,24 @@ hr {
     margin-bottom: -15px;
 }
 
-.progress .list-title {
+.progress .list-title,
+.progress .list-percentage {
     font-weight: 800;
     font-size: 18px;
     margin-bottom: -5px;
+}
+
+.progress .list-percentage {
+    text-align: right;
+}
+
+.progress {
+    width: 60%;
+}
+
+.progress .progress-text {
+    justify-content: space-between;
+    display: flex;
 }
 
 .progress-container {
@@ -88,6 +102,22 @@ hr {
 }
 
 meter {
-    width: 60%;
+    width: 100%;
     height: 18px;
+}
+
+meter::-webkit-meter-optimum-value {
+    background: grey;
+}
+
+meter::-webkit-meter-bar {
+    border: none;
+}
+
+meter::-moz-meter-optimum-value {
+    background: grey;
+}
+
+meter::-moz-meter-bar {
+    border: none;
 }
