@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz Form Making</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1 class="title">Form Pendaftaran</h1>
+    <form>
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td class="datas"><input type="text" class="nama"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>:</td>
+                <td class="datas"><input type="password" class="password"></td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir</td>
+                <td>:</td>
+                <td class="datas">
+                    <input type="text" class="dates">/
+                    <input type="text" class="dates">/
+                    <input type="text" class="dates"> (hh/bb/tttt)
+                </td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>:</td>
+                <td class="datas"><input type="radio" class="jenis-kelamin">Laki-Laki<br><input type="radio" class="jenis-kelamin">Perempuan</td>
+            </tr>
+            <tr>
+                <td>Jurusan</td>
+                <td>:</td>
+                <td class="datas">
+                    <select name="jurusan" class="jurusan">
+                        <option value="IMT">IMT</option>
+                        <option value="MAN">MAN</option>
+                        <option value="VCD">VCD</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Hoby</td>
+                <td>:</td>
+                <td class="datas">
+                    <input type="checkbox" class="hoby">Gaming
+                    <input type="checkbox" class="hoby">Traveling
+                    <input type="checkbox" class="hoby">Rebahan
+                    <input type="checkbox" class="hoby">Dengar musik
+                    <input type="checkbox" class="hoby">Adventure
+                    <input type="checkbox" class="hoby">Lainnya
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td class="datas">
+                    <textarea name="alamat" cols="28" rows="6" class="alamat"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>semester</td>
+                <td>:</td>
+                <td class="datas">
+                    <select name="semester" class="semester">
+                        <option value="1">satu</option>
+                        <option value="2">dua</option>
+                        <option value="3">tiga</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" class="submit" value="Kirim">
+    </form>
+</div>
+</body>
+</html>
