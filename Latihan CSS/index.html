@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Lab Web Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        p[class=""]{
+            color: purple;
+        }
+        h1[class="internal-css"]{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+    <br>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+    </div>
+    <br><br>
+    <p style="color: red;">Tulisan bewarna merah</p>
+    <!-- p itu adalah paragraf dan style di atas adalah inline css -->
+    <div style="padding: 20px; color: blue;">Isi dari paragraf</div>
+    <!-- div itu adalah container dan style di atas adalah inline css -->
+    <p class="">Isi Paragraf ....</p>
+    <h1 class="internal-css">Isi Header</h1>
+    <!-- p dan h1 di atas menggunakan internal atau embedded css -->
+    <p class="external-css">Isi Paragraf ....</p>
+    <!-- p di atas menggunakan external css dari file style.css -->
+</body>
+</html>
