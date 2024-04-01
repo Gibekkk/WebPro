@@ -1,0 +1,135 @@
+.desktop-3 {
+    position: absolute;
+    background-color: #fffd54;
+    height: 560px;
+    width: 1000px;
+    padding: 0;
+    top: 0;
+  }
+  .ellipse1 {
+    background-color: #f6c3cb;
+    height: 493.36px;
+    width: 493.36px;
+    top: 36.64px;
+    left: 152px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .ellipse2 {
+    background-color: #fffeff;
+    height: 113.92px;
+    width: 175.52px;
+    top: 308.88px;
+    left: 312px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .ellipse3 {
+    background-color: #e63df5;
+    height: 52.8px;
+    width: 52.8px;
+    top: 339.52px;
+    left: 332.8px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .ellipse4 {
+    background-color: #e93ef6;
+    height: 52.8px;
+    width: 52.8px;
+    top: 339.52px;
+    left: 414.4px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .ellipse5 {
+    background-color: #ffffff;
+    height: 88.88px;
+    width: 90.56px;
+    top: 191.04px;
+    left: 457.2px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .ellipse6 {
+    background-color: #ffffff;
+    height: 88.32px;
+    width: 89.44px;
+    top: 191.04px;
+    left: 252.24px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .ellipse7 {
+    background-color: #000000;
+    height: 52.8px;
+    width: 53.36px;
+    top: 197.2px;
+    left: 279.44px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .ellipse8 {
+    background-color: #000000;
+    height: 52.8px;
+    width: 53.36px;
+    top: 197.2px;
+    left: 483.92px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .polygon1 {
+    background-color: #e83df5;
+    height: 139.44px;
+    width: 134.32px;
+    left: 236.8px;
+    top: 6.32px;
+    position: absolute;
+  }
+  .polygon2 {
+    background-color: #ea3df2;
+    height: 140.08px;
+    width: 141.44px;
+    left: 441.68px;
+    top: 70.64px;
+    position: absolute;
+  }
+  .polygon3 {
+    background-color: #675557;
+    height: 41.2px;
+    width: 116.32px;
+    left: 341.76px;
+    top: 477.84px;
+    position: absolute;
+  }
+  .earleft,
+  .earright{
+    content : '';
+    position: absolute;
+    border-radius: 40%;
+    width: 0;
+    height: 45px;
+    border-right: 75px solid transparent;
+    border-left: 75px solid transparent;
+    border-top: 90px solid #f333d3;
+  }
+  .earleft {
+    transform: rotate(-20deg);
+    margin-top: 50px;
+    margin-left:  180px;
+}
+  .earright {
+    transform: rotate(20deg);
+    margin-top: 50px;
+    margin-left:  470px;
+}
+.mouth {
+  width: 60px;
+  height: 50px;
+  border-bottom: 15px solid black;
+  border-radius: 70%;
+  position: absolute;
+  display: block;
+  margin-top: 420px;
+  margin-left: 370px;
+}

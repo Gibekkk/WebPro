@@ -1,0 +1,72 @@
+.header{
+    background-color: brown;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    color: white;
+}
+.content{
+    display: flex;
+    height: 414px;
+}
+nav{
+    color: white;
+    background-color: red;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+}
+.articles{
+    color: black;
+    width: 80%;
+    height: 100%;
+}
+.article{
+    width: 100%;
+}
+footer{
+    background-color: orange;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+article{
+    text-align: center;
+    width: 100%;
+    height: 60%;
+    font-size: 30px;
+}
+header{
+    margin-top: 10px;
+    background-color: #999999;
+    width: 100%;
+    text-align: center;
+}
+.article-list{
+    display: flex;
+    width: 100%;
+    background-color: cyan;
+}
+figure,
+figcaption{
+    width: 90%;
+    text-align: center;
+}
+figure{
+    background-color: lime;
+    height: 100px;
+    margin: 10px 10px 0px 10px;
+}
+figcaption{
+    background-color: grey;
+    margin: 0 10px 10px 10px;
+}
+.figures{
+    width: 20%;
+    margin: auto 0;
+}
+.footer{
+    height: 80px;
+    background-color: bisque;
+}
