@@ -1,0 +1,10 @@
+.header-text{
+    color: white !important;
+}
+.texts{
+    font-size: 1vw;
+}
+.title-header{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: fit-content;
+}
