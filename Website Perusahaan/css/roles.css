@@ -1,0 +1,59 @@
+.header-text{
+    color: white !important;
+}
+.texts{
+    font-size: 1vw;
+}
+.title-header{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: fit-content;
+}
+footer{
+    text-align: center;
+    position: relative;
+    color: white;
+    font-weight: 400;
+    line-height: 1vw;
+    margin-bottom: 1vw;
+    font-size: 1vw;
+}
+.back-img{
+    filter: brightness(50%);
+    height: 123vh;
+    object-fit: cover;
+    object-position: 100% 0;
+  }
+
+ .hover-underline-animation {
+   position: relative;
+   color: white;
+ }
+ 
+ .hover-underline-animation:after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   transform: scaleX(0);
+   height: 5px;
+   bottom: 0;
+   left: 0;
+   background-color: white;
+   transform-origin: bottom right;
+   transition: transform 0.25s ease-out;
+ }
+ 
+ .hover-underline-animation:hover:after {
+   transform: scaleX(1);
+   transform-origin: bottom left;
+ }
+.dropdown-menu .active-list{
+    text-decoration: underline;
+    font-weight: 700;
+}
+.skill-category{
+    text-align: center;
+    font-size: 3vw;
+}
+.skill-title{
+    font-size: 1.5vw;
+}

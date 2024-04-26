@@ -8,3 +8,12 @@
     background-color: rgba(255, 255, 255, 0.1);
     width: fit-content;
 }
+footer{
+    text-align: center;
+    position: relative;
+    color: white;
+    font-weight: 400;
+    line-height: 1vw;
+    margin-bottom: 1vw;
+    font-size: 1vw;
+}
