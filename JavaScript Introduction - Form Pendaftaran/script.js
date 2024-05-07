@@ -1,7 +1,7 @@
 var inputs = document.getElementsByTagName('input');
 var selects = document.getElementsByTagName('select');
 for(var i = 0; i < inputs.length; i++) {
-    inputs[i].required = true;
+    // inputs[i].required = true;
     inputs[i].classList.add("focus-ring");
 }
         
@@ -56,7 +56,7 @@ form.addEventListener("submit", function(event){
                         reader.onload = function () {
                             localStorage.setItem("image", reader.result);
                             image.setAttribute("src", localStorage.getItem("image"));
-                            image.setAttribute("class", "output-image");
+                            image.setAttribute("class", "output-image img-fluid w-50");
                         };
                         displayDiv.appendChild(image);
                     }

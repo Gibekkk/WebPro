@@ -13,20 +13,23 @@
               <h4><u>Registration Form</u></h4>
               <form id="myForm">
                 <div class="row g-3">
-                  <div class="col-sm-5">
+                  <div class="col-sm-3">
                     <label class="form-label">Name</label>
                     <input type="text" class="form-control" placeholder="Insert Name" name="name">
       
                   </div>
       
-                  <div class="col-sm-4">
+                  <div class="col-sm-6">
                     <label class="form-label">Gender</label>
-                    <div style="display: flex; justify-content: space-between;">
+                    <div style="display: flex; justify-content: space-between; gap: 3%;">
                         <div style="width: 45%;">
                             <a class="jeniskelamin-btn btn btn-outline-primary" id="maleButton" onclick="toMale()">Male</a>
                         </div>
                         <div style="width: 45%;">
                             <a class="jeniskelamin-btn btn btn-outline-danger" id="femaleButton" onclick="toFemale()">Female</a>
+                        </div>
+                        <div style="width: 45%;">
+                            <a class="jeniskelamin-btn btn btn-outline-warning" id="otherButton" onclick="toOther()">Other</a>
                         </div>
                     </div>
                   </div>

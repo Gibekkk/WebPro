@@ -27,10 +27,10 @@
    padding: 15px;
 }
 
-.output-image {
+/* .output-image {
    width: 50px;
    height: 50px;
-}
+} */
 
 .jeniskelamin-btn {
    width: 100%;
@@ -199,4 +199,85 @@
 
 #female #output-container {
    border: 3px solid #d810c7;
+}
+
+
+/* Other Color */
+#other {
+   background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+   background-size: 1800% 1800%;
+   
+   -webkit-animation: rainbow 8s ease infinite;
+   -z-animation: rainbow 8s ease infinite;
+   -o-animation: rainbow 8s ease infinite;
+   animation: rainbow 8s ease infinite;
+   color: white;
+}
+
+#other input,
+#other select,
+#other input::file-selector-button {
+   --bs-focus-ring-color: rgba(var(--bs-warning-rgb), .25)
+}
+
+#other #container-card {
+   background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+}
+
+#other input,
+#other select {
+   background: none;
+   color: white;
+   color-scheme: dark;
+}
+
+#other select option {
+   color: black;
+}
+
+#other input::file-selector-button {
+   background: none;
+   color: #ded7b8;
+}
+
+#other input::placeholder {
+   color: white;
+}
+
+#other input::-ms-input-placeholder {
+   color: white;
+}
+
+#other #button {
+   background: none;
+   border: 2px solid #ffffff;
+}
+
+#other #break-line {
+   border: 3.5px solid #ff04f2;
+}
+
+#other #output-container {
+   border: 3px solid #07aef0;
+}
+
+@-webkit-keyframes rainbow {
+   0%{background-position:0% 82%}
+   50%{background-position:100% 19%}
+   100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+   0%{background-position:0% 82%}
+   50%{background-position:100% 19%}
+   100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+   0%{background-position:0% 82%}
+   50%{background-position:100% 19%}
+   100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+   0%{background-position:0% 82%}
+   50%{background-position:100% 19%}
+   100%{background-position:0% 82%}
 }
