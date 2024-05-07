@@ -17,21 +17,45 @@ form.addEventListener("submit", function(event){
     event.preventDefault()
     displayDiv.innerHTML = "";
     let lanjut = true;
-    if(new Date(dateForm.value) > currentDate){
-        alert(toTitleCase(dateForm.name) + " Invalid!");
-        dateForm.value = "";
-        lanjut = false;
-    }
-    if(genderForm.value == "none"){
-        alert("Please Select Your Gender!");
-        lanjut = false;
-    }
-    for(var i = 0; i < selects.length; i++) {
-        if(selects[i].value == "none"){
-            alert(toTitleCase(selects[i].name) + " Not Filled!");
-            lanjut = false;
+    var check = true;
+    if(check){
+        if(new Date(dateForm.value) > currentDate){
+            if(lanjut){
+                alert(toTitleCase(dateForm.name) + " Invalid!");
+                dateForm.value = "";
+                lanjut = false;
+            }
         }
-    }
+        if(genderForm.value == "none"){
+            if(lanjut){
+                alert("Please Select Your Gender!");
+                lanjut = false;
+            }
+        }
+        var alertOn = false;
+        for(var i = 0; i < selects.length; i++) {
+            if(selects[i].value == "none"){
+                if(lanjut){
+                    alertOn = true;
+                }
+                lanjut = false;
+            }
+        }
+        for(var i = 0; i < inputs.length; i++){
+            if(!inputs[i]){
+                if(lanjut){
+                    alertOn = true;
+                }
+                lanjut = false;
+            }
+        }
+        if(dateForm.value == "" && lanjut){
+            alertOn = true;
+        }
+        if(alertOn){
+            alert("Please Fill All Inputs!");
+        }
+    }    
     if(lanjut){
         displayDiv.appendChild(pagehr);
         const formData = new FormData(form);

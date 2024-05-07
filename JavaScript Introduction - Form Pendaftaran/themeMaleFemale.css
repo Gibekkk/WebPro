@@ -1,0 +1,245 @@
+* {
+   transition-duration: 0.5s;
+}
+
+/* Default Color */
+#default {
+    background-color: #212529;
+    color: white;
+}
+
+#default input,
+#default select,
+#default input::file-selector-button {
+--bs-focus-ring-color: rgba(var(--bs-light-rgb), .25)
+}
+
+#default input,
+#default select {
+background-color: #212529;
+color: white;
+color-scheme: dark;
+}
+
+#default select option:hover {
+box-shadow: 0 0 10px 100px #12303b inset;
+}
+
+#default input::file-selector-button {
+background-color: #2b3036;
+color: #ded7b8;
+}
+
+#default input::placeholder {
+color: white;
+}
+
+#default input::-ms-input-placeholder {
+color: white;
+}
+
+#default #container-card {
+background-color: #1d1f21;
+}
+
+#default #button {
+background-color: #292b2c;
+border: 2px solid #3a444c;
+}
+
+#default #break-line {
+border: 3.5px solid #2d363b;
+}
+
+#default #output-container {
+border: 3px solid #2e8548;
+}
+
+
+/* Male Color */
+#male {
+    background-color: #3180cf;
+    color: white;
+ }
+ 
+ #male input,
+ #male select,
+ #male input::file-selector-button {
+    --bs-focus-ring-color: rgba(var(--bs-primary-rgb), .25)
+ }
+ 
+ #male #container-card {
+    background-color: #053e77;
+ }
+ 
+ #male input,
+ #male select {
+    background-color: #2a6cad;
+    color: white;
+    color-scheme: dark;
+ }
+ 
+ #male select option:hover {
+    box-shadow: 0 0 10px 100px #12303b inset;
+ }
+ 
+ #male input::file-selector-button {
+    background-color: #05418a;
+    color: #ded7b8;
+ }
+ 
+ #male input::placeholder {
+    color: white;
+ }
+ 
+ #male input::-ms-input-placeholder {
+    color: white;
+ }
+ 
+ #male #button {
+    background-color: #178bc5;
+    border: 2px solid #0183ee;
+ }
+ 
+ #male #break-line {
+    border: 3.5px solid #0a4261;
+ }
+ 
+ #male #output-container {
+    border: 3px solid #d88810;
+ }
+ 
+ 
+ /* Female Color */
+ #female {
+    background-color: #cf318d;
+    color: white;
+ }
+ 
+ #female input,
+ #female select,
+ #female input::file-selector-button {
+    --bs-focus-ring-color: rgba(var(--bs-danger-rgb), .25)
+ }
+ 
+ #female #container-card {
+    background-color: #77056e;
+ }
+ 
+ #female input,
+ #female select {
+    background-color: #ad2a8c;
+    color: white;
+    color-scheme: dark;
+ }
+ 
+ #female select option:hover {
+    box-shadow: 0 0 10px 100px #12303b inset;
+ }
+ 
+ #female input::file-selector-button {
+    background-color: #8a0578;
+    color: #ded7b8;
+ }
+ 
+ #female input::placeholder {
+    color: white;
+ }
+ 
+ #female input::-ms-input-placeholder {
+    color: white;
+ }
+ 
+ #female #button {
+    background-color: #c517ae;
+    border: 2px solid #e601ee;
+ }
+ 
+ #female #break-line {
+    border: 3.5px solid #610a5d;
+ }
+ 
+ #female #output-container {
+    border: 3px solid #d810c7;
+ }
+ 
+ 
+ /* Other Color */
+ #other {
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    
+    -webkit-animation: rainbow 8s ease infinite;
+    -z-animation: rainbow 8s ease infinite;
+    -o-animation: rainbow 8s ease infinite;
+    animation: rainbow 8s ease infinite;
+    color: white;
+ }
+ 
+ #other input,
+ #other select,
+ #other input::file-selector-button {
+    --bs-focus-ring-color: rgba(var(--bs-warning-rgb), .25)
+ }
+ 
+ #other #container-card {
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+ }
+ 
+ #other input,
+ #other select {
+    background: none;
+    color: white;
+    color-scheme: dark;
+ }
+ 
+ #other select option {
+    color: black;
+ }
+ 
+ #other input::file-selector-button {
+    background: none;
+    color: #ded7b8;
+ }
+ 
+ #other input::placeholder {
+    color: white;
+ }
+ 
+ #other input::-ms-input-placeholder {
+    color: white;
+ }
+ 
+ #other #button {
+    background: none;
+    border: 2px solid #ffffff;
+ }
+ 
+ #other #break-line {
+    border: 3.5px solid #ff04f2;
+ }
+ 
+ #other #output-container {
+    border: 3px solid #07aef0;
+ }
+ 
+ @-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+ }
+ @-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+ }
+ @-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+ }
+ @keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+ }
