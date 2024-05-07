@@ -1,54 +1,202 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
+/* Global CSS */
+#container-card {
+   margin: 30px;
+   padding: 30px;
+   border-radius: 10px;
 }
 
-.card {
-    background: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    width: 500px;
-    margin: 20px;
-    border-radius: 8px;
+#button {
+   margin-top: 40px;
+   width: 35%;
+   height: 45px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+#break-line {
+   opacity: 100%;
+   border-radius: 3.5px;
+   width: 80%;
+   margin: auto;
+   margin-top: 50px;
+   margin-bottom: 50px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="date"],
-input[type="tel"],
-select,
-input[type="file"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+#output-container {
+   border-radius: 20px;
+   padding: 15px;
 }
 
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+.output-image {
+   width: 50px;
+   height: 50px;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+.jeniskelamin-btn {
+   width: 100%;
 }
 
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
+* {
+   transition-duration: 0.5s;
+}
+
+/* Default Color */
+#default {
+   background-color: #212529;
+   color: white;
+}
+
+#default input,
+#default select,
+#default input::file-selector-button {
+   --bs-focus-ring-color: rgba(var(--bs-light-rgb), .25)
+}
+
+#default input,
+#default select {
+   background-color: #212529;
+   color: white;
+   color-scheme: dark;
+}
+
+#default select option:hover {
+   box-shadow: 0 0 10px 100px #12303b inset;
+}
+
+#default input::file-selector-button {
+   background-color: #2b3036;
+   color: #ded7b8;
+}
+
+#default input::placeholder {
+   color: white;
+}
+
+#default input::-ms-input-placeholder {
+   color: white;
+}
+
+#default #container-card {
+   background-color: #1d1f21;
+}
+
+#default #button {
+   background-color: #292b2c;
+   border: 2px solid #3a444c;
+}
+
+#default #break-line {
+   border: 3.5px solid #2d363b;
+}
+
+#default #output-container {
+   border: 3px solid #2e8548;
+}
+
+
+/* Male Color */
+#male {
+   background-color: #3180cf;
+   color: white;
+}
+
+#male input,
+#male select,
+#male input::file-selector-button {
+   --bs-focus-ring-color: rgba(var(--bs-primary-rgb), .25)
+}
+
+#male #container-card {
+   background-color: #053e77;
+}
+
+#male input,
+#male select {
+   background-color: #2a6cad;
+   color: white;
+   color-scheme: dark;
+}
+
+#male select option:hover {
+   box-shadow: 0 0 10px 100px #12303b inset;
+}
+
+#male input::file-selector-button {
+   background-color: #05418a;
+   color: #ded7b8;
+}
+
+#male input::placeholder {
+   color: white;
+}
+
+#male input::-ms-input-placeholder {
+   color: white;
+}
+
+#male #button {
+   background-color: #178bc5;
+   border: 2px solid #0183ee;
+}
+
+#male #break-line {
+   border: 3.5px solid #0a4261;
+}
+
+#male #output-container {
+   border: 3px solid #d88810;
+}
+
+
+/* Female Color */
+#female {
+   background-color: #cf318d;
+   color: white;
+}
+
+#female input,
+#female select,
+#female input::file-selector-button {
+   --bs-focus-ring-color: rgba(var(--bs-danger-rgb), .25)
+}
+
+#female #container-card {
+   background-color: #77056e;
+}
+
+#female input,
+#female select {
+   background-color: #ad2a8c;
+   color: white;
+   color-scheme: dark;
+}
+
+#female select option:hover {
+   box-shadow: 0 0 10px 100px #12303b inset;
+}
+
+#female input::file-selector-button {
+   background-color: #8a0578;
+   color: #ded7b8;
+}
+
+#female input::placeholder {
+   color: white;
+}
+
+#female input::-ms-input-placeholder {
+   color: white;
+}
+
+#female #button {
+   background-color: #c517ae;
+   border: 2px solid #e601ee;
+}
+
+#female #break-line {
+   border: 3.5px solid #610a5d;
+}
+
+#female #output-container {
+   border: 3px solid #d810c7;
 }
