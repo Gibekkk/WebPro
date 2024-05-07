@@ -3,111 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tes Tes Form</title>
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form action="" id="myForm">
-        Name: <input type="text" name="name"><br>
-        Email: <input type="email" name="email"><br>
-        Birth Date: <input type="date" name="birth date" id="tgl_lahir"><br>
-        Gender:
-        <input type="radio" name="gender" value="Laki-Laki"> Laki-Laki
-        <input type="radio" name="gender" value="Perempuan"> Perempuan
-        <br>
-        Program of Interest: 
-        <select name="program of interest" id="poi">
-            <option disabled selected>-- Select Your Program --</option>
-            <option value="Management">Management</option>
-            <option value="Informatika">Informatika</option>
-            <option value="Visual Communication Design">Visual Communication Design</option>
-        </select>
-        <br>
-        Phone Number: <input type="tel" name="phone number"><br>
-        Mother's Name: <input type="text" name="mother's name"><br>
-        Father's Name: <input type="text" name="father's name"><br>
-        Photo: <input type="file" name="photo" id="image" oninput="imageInput()"><br>
-        <input type="submit" value="Submit!" id="submit">
-    </form>
+    <div class="card">
+        <h1>Form Pendaftaran</h1>
+        <form action="" id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            
+            <label for="address">Address:</label>
+            <input type="text" name="address" id="address">
+            
+            <label for="tgl_lahir">Birth Date:</label>
+            <input type="date" name="birth date" id="tgl_lahir">
+            
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Laki-Laki" id="male"> <label for="male">Laki-Laki</label>
+            <input type="radio" name="gender" value="Perempuan" id="female"> <label for="female">Perempuan</label>
+            
+            <label for="poi">Program of Interest:</label>
+            <select name="program of interest" id="poi">
+                <option disabled selected>-- Select Your Program --</option>
+                <option value="Management">Management</option>
+                <option value="Informatika">Informatika</option>
+                <option value="Visual Communication Design">Visual Communication Design</option>
+            </select>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" name="phone number" id="phone">
+            
+            <label for="mother">Mother's Name:</label>
+            <input type="text" name="mother's name" id="mother">
+            
+            <label for="father">Father's Name:</label>
+            <input type="text" name="father's name" id="father">
+            
+            <label for="image">Photo:</label>
+            <input type="file" name="photo" id="image" oninput="imageInput()">
+            
+            <input type="submit" value="Submit!" id="submit">
+        </form>
+        <div id="display" style="display: none;"></div>
+    </div>
     <div id="display" style="display: none;"></div>
 
-    <script type="text/javascript">
-        var inputs = document.getElementsByTagName('input');
-        for(var i = 0; i < inputs.length; i++) {
-            // inputs[i].required = true;
-        }
-
-        const imgForm = document.getElementById('image');
-        const poiForm = document.getElementById('poi');
-        const dateForm = document.getElementById('tgl_lahir');
-        const form = document.getElementById("myForm");
-        let pagehr = document.createElement("hr");
-        let displayDiv = document.getElementById("display");
-        const currentDate = new Date();
-        const imgStyle = "width: 50%";
-        form.addEventListener("submit", function(event){
-            event.preventDefault()
-            displayDiv.innerHTML = "";
-            displayDiv.appendChild(pagehr);
-            let lanjut = true;
-            if(new Date(dateForm.value) > currentDate){
-                alert("Tanggal Lahir Invalid!");
-                dateForm.value = "";
-                lanjut = false;
-            }
-            if(lanjut){
-                const formData = new FormData(form);
-                var parsedData = {};
-                for(var [key, value] of formData){
-                    parsedData[key] = value;
-                    switch(typeof value){
-                        case "string":
-                            let para = document.createElement("p");
-                            para.textContent = toTitleCase(key) + ": " + value;
-                            displayDiv.appendChild(para);
-                            break;
-                        case "object":
-                            let prg = document.createElement("p");
-                            prg.textContent = toTitleCase(key) + ": ";
-                            displayDiv.appendChild(prg);
-                            if(imgForm.files.length != 0){
-                                let file = imgForm.files[0];
-                                let image = document.createElement("img");
-                                var reader = new FileReader();
-                                reader.readAsDataURL(file);
-                                reader.onload = function () {
-                                    localStorage.setItem("image", reader.result);
-                                    image.setAttribute("src", localStorage.getItem("image"));
-                                    image.setAttribute("style", imgStyle);
-                                };
-                                displayDiv.appendChild(image);
-                            }
-                            break;
-                    }
-                }
-                console.log(parsedData);
-                displayDiv.style.display = "block";
-            }
-        });
-        
-        function imageInput(){
-            let file = imgForm.files[0];
-            const  fileType = file['type'];
-            const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
-            if (!validImageTypes.includes(fileType)) {
-                alert("File Type is Not Supported! Only Image!");
-                imgForm.value = "";
-            }
-        }
-
-
-        function toTitleCase(str) {
-            return str.replace(
-                /\w\S*/g,
-                function(txt) {
-                    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-                }
-            );
-        }
-    </script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
