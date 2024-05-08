@@ -11,15 +11,17 @@ const genderForm = document.getElementById("genderInput");
 const form = document.getElementById("myForm");
 let pagehr = document.createElement("hr");
 let displayDiv = document.getElementById("displayDiv");
+let outputDiv = document.getElementById("outputDiv");
 const currentDate = new Date();
 
 form.addEventListener("submit", function(event){
     event.preventDefault()
     displayDiv.innerHTML = "";
+    outputDiv.style.display = "block";
     let lanjut = true;
     var check = true;
     if(check){
-        if(new Date(dateForm.value) > currentDate){
+        if(new Date(dateForm.value) >= currentDate){
             if(lanjut){
                 alert(toTitleCase(dateForm.name) + " Invalid!");
                 dateForm.value = "";

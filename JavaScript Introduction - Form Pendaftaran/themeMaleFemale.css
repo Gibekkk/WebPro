@@ -26,8 +26,8 @@ box-shadow: 0 0 10px 100px #12303b inset;
 }
 
 #default input::file-selector-button {
-background-color: #2b3036;
-color: #ded7b8;
+background-color: #2b3036 !important;
+color: #ded7b8 !important;
 }
 
 #default input::placeholder {
@@ -84,8 +84,8 @@ border: 3px solid #2e8548;
  }
  
  #male input::file-selector-button {
-    background-color: #05418a;
-    color: #ded7b8;
+    background-color: #05418a !important;
+    color: #ded7b8 !important;
  }
  
  #male input::placeholder {
@@ -138,8 +138,8 @@ border: 3px solid #2e8548;
  }
  
  #female input::file-selector-button {
-    background-color: #8a0578;
-    color: #ded7b8;
+    background-color: #8a0578 !important;
+    color: #ded7b8 !important;
  }
  
  #female input::placeholder {
@@ -198,8 +198,8 @@ border: 3px solid #2e8548;
  }
  
  #other input::file-selector-button {
-    background: none;
-    color: #ded7b8;
+    background: none !important;
+    color: #ded7b8 !important;
  }
  
  #other input::placeholder {

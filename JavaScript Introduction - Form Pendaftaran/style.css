@@ -39,11 +39,12 @@
 .body input,
 .body select,
 .body input::file-selector-button {
---bs-focus-ring-color: rgba(var(--bs-light-rgb), .25)
+   --bs-focus-ring-color: rgba(var(--bs-light-rgb), .25)
 }
 
 .body input,
-.body select {
+.body select,
+.body input:focus {
 background-color: #212529;
 color: white;
 color-scheme: dark;
@@ -54,8 +55,8 @@ box-shadow: 0 0 10px 100px #12303b inset;
 }
 
 .body input::file-selector-button {
-background-color: #2b3036;
-color: #ded7b8;
+background-color: #2b3036 !important;
+color: #ded7b8 !important;
 }
 
 .body input::placeholder {
