@@ -1,0 +1,99 @@
+/* Dark Theme */
+.body.dark {
+    background-color: #212529;
+    color: white;
+}
+
+.body.dark input,
+.body.dark select,
+.body.dark input::file-selector-button {
+    --bs-focus-ring-color: rgba(var(--bs-light-rgb), .25)
+}
+
+.body.dark input,
+.body.dark select,
+.body.dark input:focus {
+    background-color: #212529;
+    color: white;
+    color-scheme: dark;
+}
+
+.body.dark input::file-selector-button {
+    background-color: #2b3036 !important;
+    color: #ded7b8 !important;
+}
+
+.body.dark input::placeholder {
+    color: grey;
+}
+
+.body.dark input::-ms-input-placeholder {
+    color: grey;
+}
+
+.body.dark #container-card {
+    background-color: #1d1f21;
+}
+
+.body.dark #button {
+    background-color: #292b2c;
+    border: 2px solid #3a444c;
+}
+
+.body.dark #break-line {
+    border: 3.5px solid #2d363b;
+}
+
+.body.dark #output-container {
+    border: 3px solid #2e8548;
+}
+
+/* Light Theme */
+.body.light {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+.body.light input,
+.body.light select,
+.body.light input::file-selector-button {
+    --bs-focus-ring-color: rgba(var(--bs-dark-rgb), .25)
+}
+
+.body.light input,
+.body.light select,
+.body.light input:focus {
+    background-color: #DDDDDD;
+    color: black;
+    color-scheme: light;
+}
+
+.body.light input::file-selector-button {
+    background-color: #BBBBBB !important;
+    color: white !important;
+}
+
+.body.light input::placeholder {
+    color: darkslategray;
+}
+
+.body.light input::-ms-input-placeholder {
+    color: darkslategray;
+}
+
+.body.light #container-card {
+    background-color: #F0F0F0;
+}
+
+.body.light #button {
+    background-color: #DDDDDD;
+    border: 2px solid #888888;
+}
+
+.body.light #break-line {
+    border: 3.5px solid #a9c3d1;
+}
+
+.body.light #output-container {
+    border: 3px solid #a9c3d1;
+}

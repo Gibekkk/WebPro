@@ -38,9 +38,11 @@ function turnMale(){
     buttonMale.classList.add('btn-primary');
     buttonFemale.classList.remove('btn-danger');
     buttonFemale.classList.add('btn-outline-danger');
-    buttonOther.classList.remove('btn-warning');
-    buttonOther.classList.add('btn-outline-warning');
+    buttonOther.classList.remove('btn-other');
+    buttonOther.classList.add('btn-outline-other');
     formGender.value = "Male";
+
+    document.getElementById("genderForm").style.display = "none";
 }
 
 function turnFemale(){
@@ -51,9 +53,11 @@ function turnFemale(){
     buttonFemale.classList.add('btn-danger');
     buttonMale.classList.remove('btn-primary');
     buttonMale.classList.add('btn-outline-primary');
-    buttonOther.classList.remove('btn-warning');
-    buttonOther.classList.add('btn-outline-warning');
+    buttonOther.classList.remove('btn-other');
+    buttonOther.classList.add('btn-outline-other');
     formGender.value = "Female";
+
+    document.getElementById("genderForm").style.display = "none";
 }
 
 function turnOther(){
@@ -64,9 +68,11 @@ function turnOther(){
     buttonFemale.classList.add('btn-outline-danger');
     buttonMale.classList.remove('btn-primary');
     buttonMale.classList.add('btn-outline-primary');
-    buttonOther.classList.remove('btn-outline-warning');
-    buttonOther.classList.add('btn-warning');
+    buttonOther.classList.remove('btn-outline-other');
+    buttonOther.classList.add('btn-other');
     formGender.value = "Other";
+
+    document.getElementById("genderForm").style.display = "block";
 }
 
 function turnDefault(){
@@ -77,7 +83,9 @@ function turnDefault(){
     buttonMale.classList.add('btn-outline-primary');
     buttonFemale.classList.remove('btn-danger');
     buttonFemale.classList.add('btn-outline-danger');
-    buttonOther.classList.remove('btn-warning');
-    buttonOther.classList.add('btn-outline-warning');
+    buttonOther.classList.remove('btn-other');
+    buttonOther.classList.add('btn-outline-other');
     formGender.value = "none";
+
+    document.getElementById("genderForm").style.display = "none";
 }

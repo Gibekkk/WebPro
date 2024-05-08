@@ -7,17 +7,21 @@ for(var i = 0; i < inputs.length; i++) {
         
 const imgForm = document.querySelector('input[type="file"]');
 const dateForm = document.querySelector('input[type="date"]');
+const phoneForm = document.querySelector('input[name="phone number"]');
+const emailForm = document.querySelector('input[name="email"]');
 const genderForm = document.getElementById("genderInput");
 const form = document.getElementById("myForm");
 let pagehr = document.createElement("hr");
 let displayDiv = document.getElementById("displayDiv");
 let outputDiv = document.getElementById("outputDiv");
 const currentDate = new Date();
+const phoneFormat = /^(\+)(62)([0-9]{10,13})$/gm;
+const emailFormat = /^([a-zA-Z0-9]{1,})([\.]{0,1})([a-zA-Z0-9]{1,})([\@]{1})([a-z]{1,})([\.]{1}[a-z]{1,}){1,}$/gm;
+dateForm.setAttribute("max", currentDate.toISOString().split("T")[0]);
 
 form.addEventListener("submit", function(event){
     event.preventDefault()
     displayDiv.innerHTML = "";
-    outputDiv.style.display = "block";
     let lanjut = true;
     var check = true;
     if(check){
@@ -28,9 +32,21 @@ form.addEventListener("submit", function(event){
                 lanjut = false;
             }
         }
-        if(genderForm.value == "none"){
+        if(genderForm.value == "none" || genderForm.value == ""){
             if(lanjut){
                 alert("Please Select Your Gender!");
+                lanjut = false;
+            }
+        }
+        if(!emailFormat.test(emailForm.value)){
+            if(lanjut){
+                alert("Email Invalid!");
+                lanjut = false;
+            }
+        }
+        if(!phoneFormat.test(phoneForm.value)){
+            if(lanjut){
+                alert("Phone Number Invalid!");
                 lanjut = false;
             }
         }
@@ -59,6 +75,7 @@ form.addEventListener("submit", function(event){
         }
     }    
     if(lanjut){
+        outputDiv.style.display = "block";
         displayDiv.appendChild(pagehr);
         const formData = new FormData(form);
         var parsedData = {};
@@ -104,6 +121,11 @@ function imageInput(){
     }
 }
 
+function checkPhone(){
+    if(!/^([\+](62))/gm.test(phoneForm.value)){
+        phoneForm.value = "+62"; 
+    }
+}
 
 function toTitleCase(str) {
     return str.replace(
