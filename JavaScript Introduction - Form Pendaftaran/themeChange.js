@@ -14,7 +14,7 @@ function changeTheme() {
     }
 }
 
-
+// Fungsi untuk mengubah theme berdasarkan waktunya
 function checkTheme(){
     // Mendapatkan string waktu lokal dan mengambil bagian waktu saja
     var waktu = new Date().toLocaleString().split(", ")[1];
@@ -23,7 +23,7 @@ function checkTheme(){
     // Mengambil setting AM atau PM dari string waktu
     var timeSetting = waktu.split(" ")[1];
     // Jika waktu menunjukkan PM, konversi jam ke format 24 jam
-    if(timeSetting == "PM") jam += 12;
+    if(timeSetting == "PM") jam = parseInt(jam) + 12;
     // Jika jam menunjukkan 24, ubah menjadi 0 untuk representasi tengah malam
     if(jam == 24) jam = 0;
     // Jika jam antara 6 pagi dan 18 sore, atur tema ke light
