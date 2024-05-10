@@ -5,275 +5,275 @@
 /* Default Color */
 /* Dark Theme */
 #default.dark {
-   background-color: #212529;
-   color: white;
+   background-color: #212529; /* Warna latar belakang tema gelap */
+   color: white; /* Warna teks tema gelap */
 }
 
 #default.dark input,
 #default.dark select,
 #default.dark input::file-selector-button {
-   --bs-focus-ring-color: rgba(var(--bs-light-rgb), .25)
+   --bs-focus-ring-color: rgba(var(--bs-light-rgb), .25) /* Warna fokus ring */
 }
 
 #default.dark input,
 #default.dark select,
 #default.dark input:focus {
-   background-color: #212529;
-   color: white;
-   color-scheme: dark;
+   background-color: #212529; /* Warna latar belakang input dan select pada tema gelap */
+   color: white; /* Warna teks input dan select pada tema gelap */
+   color-scheme: dark; /* Skema warna untuk komponen */
 }
 
 #default.dark input::file-selector-button {
-   background-color: #2b3036 !important;
-   color: #ded7b8 !important;
+   background-color: #2b3036 !important; /* Warna latar belakang tombol pemilih file */
+   color: #ded7b8 !important; /* Warna teks tombol pemilih file */
 }
 
 #default.dark input::placeholder {
-   color: grey;
+   color: grey; /* Warna placeholder input */
 }
 
 #default.dark input::-ms-input-placeholder {
-   color: grey;
+   color: grey; /* Warna placeholder input untuk IE */
 }
 
 #default.dark #container-card {
-   background-color: #1d1f21;
+   background-color: #1d1f21; /* Warna latar belakang kartu kontainer */
 }
 
 #default.dark #button, 
 #default.dark input[type=reset]{
-   background-color: #292b2c;
-   border: 2px solid #3a444c;
+   background-color: #292b2c; /* Warna latar belakang tombol dan input reset */
+   border: 2px solid #3a444c; /* Warna border tombol dan input reset */
 }
 
 #default.dark #break-line {
-   border: 3.5px solid #2d363b;
+   border: 3.5px solid #2d363b; /* Warna border garis pemisah */
 }
 
 #default.dark #output-container {
-   border: 3px solid #2e8548;
+   border: 3px solid #2e8548; /* Warna border kontainer output */
 }
 
 /* Light Theme */
 #default.light {
-   background-color: #FFFFFF;
-   color: black;
+   background-color: #FFFFFF; /* Warna latar belakang tema terang */
+   color: black; /* Warna teks tema terang */
 }
 
 #default.light input,
 #default.light select,
 #default.light input::file-selector-button {
-   --bs-focus-ring-color: rgba(var(--bs-dark-rgb), .25)
+   --bs-focus-ring-color: rgba(var(--bs-dark-rgb), .25) /* Warna fokus ring */
 }
 
 #default.light input,
 #default.light select,
 #default.light input:focus {
-   background-color: #DDDDDD;
-   color: black;
-   color-scheme: light;
+   background-color: #DDDDDD; /* Warna latar belakang input dan select pada tema terang */
+   color: black; /* Warna teks input dan select pada tema terang */
+   color-scheme: light; /* Skema warna untuk komponen */
 }
 
 #default.light input::file-selector-button {
-   background-color: #BBBBBB !important;
-   color: white !important;
+   background-color: #BBBBBB !important; /* Warna latar belakang tombol pemilih file */
+   color: white !important; /* Warna teks tombol pemilih file */
 }
 
 #default.light input::placeholder {
-   color: darkslategray;
+   color: darkslategray; /* Warna placeholder input */
 }
 
 #default.light input::-ms-input-placeholder {
-   color: darkslategray;
+   color: darkslategray; /* Warna placeholder input untuk IE */
 }
 
 #default.light #container-card {
-   background-color: #F0F0F0;
+   background-color: #F0F0F0; /* Warna latar belakang kartu kontainer */
 }
 
 #default.light #button, 
 #default.light input[type=reset]{
-   background-color: #DDDDDD;
-   border: 2px solid #888888;
+   background-color: #DDDDDD; /* Warna latar belakang tombol dan input reset */
+   border: 2px solid #888888; /* Warna border tombol dan input reset */
 }
 
 #default.light #break-line {
-   border: 3.5px solid #a9c3d1;
+   border: 3.5px solid #a9c3d1; /* Warna border garis pemisah */
 }
 
 #default.light #output-container {
-   border: 3px solid #a9c3d1;
+   border: 3px solid #a9c3d1; /* Warna border kontainer output */
 }
 
 
 /* Male Color */
 #male {
-   background-color: #3180cf;
-   color: white;
+   background-color: #3180cf; /* Warna latar belakang tema pria */
+   color: white; /* Warna teks tema pria */
 }
 
 #male input,
 #male select,
 #male input::file-selector-button {
-   --bs-focus-ring-color: rgba(var(--bs-primary-rgb), .25)
+   --bs-focus-ring-color: rgba(var(--bs-primary-rgb), .25) /* Warna fokus ring */
 }
 
 #male #container-card {
-   background-color: #053e77;
+   background-color: #053e77; /* Warna latar belakang kartu kontainer */
 }
 
 #male input,
 #male select {
-   background-color: #2a6cad;
-   color: white;
-   color-scheme: dark;
+   background-color: #2a6cad; /* Warna latar belakang input dan select */
+   color: white; /* Warna teks input dan select */
+   color-scheme: dark; /* Skema warna untuk komponen */
 }
 
 #male select option:hover {
-   box-shadow: 0 0 10px 100px #12303b inset;
+   box-shadow: 0 0 10px 100px #12303b inset; /* Bayangan saat hover pada opsi select */
 }
 
 #male input::file-selector-button {
-   background-color: #05418a !important;
-   color: #ded7b8 !important;
+   background-color: #05418a !important; /* Warna latar belakang tombol pemilih file */
+   color: #ded7b8 !important; /* Warna teks tombol pemilih file */
 }
 
 #male input::placeholder {
-   color: white;
+   color: white; /* Warna placeholder input */
 }
 
 #male input::-ms-input-placeholder {
-   color: white;
+   color: white; /* Warna placeholder input untuk IE */
 }
 
 #male #button, 
 #male input[type=reset]{
-   background-color: #178bc5;
-   border: 2px solid #0183ee;
+   background-color: #178bc5; /* Warna latar belakang tombol dan input reset */
+   border: 2px solid #0183ee; /* Warna border tombol dan input reset */
 }
 
 #male #break-line {
-   border: 3.5px solid #0a4261;
+   border: 3.5px solid #0a4261; /* Warna border garis pemisah */
 }
 
 #male #output-container {
-   border: 3px solid #d88810;
+   border: 3px solid #d88810; /* Warna border kontainer output */
 }
 
 
 /* Female Color */
 #female {
-   background-color: #cf318d;
-   color: white;
+   background-color: #cf318d; /* Warna latar belakang tema wanita */
+   color: white; /* Warna teks tema wanita */
 }
 
 #female input,
 #female select,
 #female input::file-selector-button {
-   --bs-focus-ring-color: rgba(var(--bs-danger-rgb), .25)
+   --bs-focus-ring-color: rgba(var(--bs-danger-rgb), .25) /* Warna fokus ring */
 }
 
 #female #container-card {
-   background-color: #77056e;
+   background-color: #77056e; /* Warna latar belakang kartu kontainer */
 }
 
 #female input,
 #female select {
-   background-color: #ad2a8c;
-   color: white;
-   color-scheme: dark;
+   background-color: #ad2a8c; /* Warna latar belakang input dan select */
+   color: white; /* Warna teks input dan select */
+   color-scheme: dark; /* Skema warna untuk komponen */
 }
 
 #female select option:hover {
-   box-shadow: 0 0 10px 100px #12303b inset;
+   box-shadow: 0 0 10px 100px #12303b inset; /* Bayangan saat hover pada opsi select */
 }
 
 #female input::file-selector-button {
-   background-color: #8a0578 !important;
-   color: #ded7b8 !important;
+   background-color: #8a0578 !important; /* Warna latar belakang tombol pemilih file */
+   color: #ded7b8 !important; /* Warna teks tombol pemilih file */
 }
 
 #female input::placeholder {
-   color: white;
+   color: white; /* Warna placeholder input */
 }
 
 #female input::-ms-input-placeholder {
-   color: white;
+   color: white; /* Warna placeholder input untuk IE */
 }
 
 #female #button, 
 #female input[type=reset]{
-   background-color: #c517ae;
-   border: 2px solid #e601ee;
+   background-color: #c517ae; /* Warna latar belakang tombol dan input reset */
+   border: 2px solid #e601ee; /* Warna border tombol dan input reset */
 }
 
 #female #break-line {
-   border: 3.5px solid #610a5d;
+   border: 3.5px solid #610a5d; /* Warna border garis pemisah */
 }
 
 #female #output-container {
-   border: 3px solid #d810c7;
+   border: 3px solid #d810c7; /* Warna border kontainer output */
 }
 
 
 /* Other Color */
 #other {
    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-   background-size: 1800% 1800%;
+   background-size: 1800% 1800%; /* Ukuran latar belakang */
 
-   -webkit-animation: rainbow 8s ease infinite;
-   -z-animation: rainbow 8s ease infinite;
-   -o-animation: rainbow 8s ease infinite;
-   animation: rainbow 8s ease infinite;
-   color: white;
+   -webkit-animation: rainbow 8s ease infinite; /* Animasi latar belakang untuk WebKit */
+   -z-animation: rainbow 8s ease infinite; /* Animasi latar belakang untuk Z */
+   -o-animation: rainbow 8s ease infinite; /* Animasi latar belakang untuk Opera */
+   animation: rainbow 8s ease infinite; /* Animasi latar belakang */
+   color: white; /* Warna teks */
 }
 
 #other input,
 #other select,
 #other input::file-selector-button {
-   --bs-focus-ring-color: rgba(var(--bs-warning-rgb), .25)
+   --bs-focus-ring-color: rgba(var(--bs-warning-rgb), .25) /* Warna fokus ring */
 }
 
 #other #container-card {
-   background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+   background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3); /* Latar belakang kartu kontainer */
 }
 
 #other input,
 #other select {
-   background: none;
-   color: white;
-   color-scheme: dark;
+   background: none; /* Tidak ada latar belakang */
+   color: white; /* Warna teks */
+   color-scheme: dark; /* Skema warna untuk komponen */
 }
 
 #other select option {
-   color: black;
+   color: black; /* Warna teks opsi select */
 }
 
 #other input::file-selector-button {
-   background: none !important;
-   color: #ded7b8 !important;
+   background: none !important; /* Tidak ada latar belakang */
+   color: #ded7b8 !important; /* Warna teks */
 }
 
 #other input::placeholder {
-   color: white;
+   color: white; /* Warna placeholder input */
 }
 
 #other input::-ms-input-placeholder {
-   color: white;
+   color: white; /* Warna placeholder input untuk IE */
 }
 
 #other #button, 
 #other input[type=reset]{
-   background: none;
-   border: 2px solid #ffffff;
+   background: none; /* Tidak ada latar belakang */
+   border: 2px solid #ffffff; /* Warna border */
 }
 
 #other #break-line {
-   border: 3.5px solid #ff04f2;
+   border: 3.5px solid #ff04f2; /* Warna border garis pemisah */
 }
 
 #other #output-container {
-   border: 3px solid #07aef0;
+   border: 3px solid #07aef0; /* Warna border kontainer output */
 }
 
 @-webkit-keyframes rainbow {

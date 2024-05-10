@@ -1,112 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Mendefinisikan dokumen sebagai HTML5 -->
+<html lang="en"> <!-- Mendefinisikan bahasa konten dalam dokumen sebagai Inggris -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="themeChange.css">
+    <meta charset="UTF-8"> <!-- Menetapkan set karakter untuk dokumen sebagai UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Menetapkan viewport untuk responsifitas -->
+    <title>Registration Form</title> <!-- Judul dokumen yang muncul di tab browser -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <!-- Menghubungkan Bootstrap CSS untuk styling -->
+    <link rel="stylesheet" href="style.css"> <!-- Menghubungkan file CSS eksternal untuk styling kustom -->
+    <link rel="stylesheet" href="themeChange.css"> <!-- Menghubungkan file CSS eksternal untuk mengubah tema -->
     <!-- Turn the stylesheet on to turn on gender theme change -->
-    <!-- <link rel="stylesheet" href="themeMaleFemale.css"> -->
+    <!-- <link rel="stylesheet" href="themeMaleFemale.css"> --> <!-- CSS untuk mengubah tema berdasarkan gender, saat ini dinonaktifkan -->
 </head>
-<body id="default" class="body dark">
-    <div id="container-card">
+<body id="default" class="body dark"> <!-- Mendefinisikan body dengan ID dan kelas untuk styling dan JavaScript -->
+    <div id="container-card"> <!-- Kontainer utama untuk form -->
         <main>
-          <form id="myForm">
-            <div style="display: flex; justify-content: space-between;">
-              <h4><u>Registration Form</u></h4>
+          <form id="myForm"> <!-- Form dengan ID untuk penggunaan JavaScript -->
+            <div style="display: flex; justify-content: space-between;"> <!-- Styling untuk header form -->
+              <h4><u>Registration Form</u></h4> <!-- Judul form -->
               <div>
-                <a class="btn" id="themeChangeBtn" onclick="changeTheme()">Mode</a>
-                <input type="reset" class="btn" value="Reset">
+                <a class="btn" id="themeChangeBtn" onclick="changeTheme()">Mode</a> <!-- Tombol untuk mengubah tema -->
+                <input type="reset" class="btn" value="Reset"> <!-- Tombol reset untuk mengosongkan form -->
               </div>
             </div>
-                <div class="row g-3">
-                  <div class="col-sm-3">
-                    <label class="form-label">Name</label>
-                    <input type="text" class="form-control" placeholder="Insert Name" name="name">
+                <div class="row g-3"> <!-- Grid row dengan gap -->
+                  <div class="col-sm-3"> <!-- Kolom grid untuk input nama -->
+                    <label class="form-label">Name</label> <!-- Label untuk input nama -->
+                    <input type="text" class="form-control" placeholder="Insert Name" name="name"> <!-- Input teks untuk nama -->
                   </div>
       
-                  <div class="col-sm-6">
-                    <label class="form-label">Gender</label>
-                    <div style="display: flex; justify-content: space-between; gap: 3%;">
-                        <div style="width: 45%;">
-                            <a class="jeniskelamin-btn btn btn-outline-primary" id="maleButton" onclick="toMale()">Male</a>
+                  <div class="col-sm-6"> <!-- Kolom grid untuk input gender -->
+                    <label class="form-label">Gender</label> <!-- Label untuk input gender -->
+                    <div style="display: flex; justify-content: space-between; gap: 3%;" id="genderContainer"> <!-- Styling untuk tombol gender -->
+                        <div style="width: 45%;"> <!-- Kontainer untuk tombol Male -->
+                            <a class="jeniskelamin-btn btn btn-outline-primary" id="maleButton" onclick="toMale()">Male</a> <!-- Tombol Male -->
                         </div>
-                        <div style="width: 45%;">
-                            <a class="jeniskelamin-btn btn btn-outline-danger" id="femaleButton" onclick="toFemale()">Female</a>
+                        <div style="width: 45%;"> <!-- Kontainer untuk tombol Female -->
+                            <a class="jeniskelamin-btn btn btn-outline-danger" id="femaleButton" onclick="toFemale()">Female</a> <!-- Tombol Female -->
                         </div>
-                        <div style="width: 45%;">
-                            <a class="jeniskelamin-btn btn btn-outline-other" id="otherButton" onclick="toOther()">Other</a>
+                        <div style="width: 45%;"> <!-- Kontainer untuk tombol Other -->
+                            <a class="jeniskelamin-btn btn btn-outline-other" id="otherButton" onclick="toOther()">Other</a> <!-- Tombol Other -->
                         </div>
                     </div>
                   </div>
 
-                  <div class="col-sm-3">
-                    <label class="form-label">Birth Date</label>
-                    <input type="date" class="form-control" name="birth date">
+                  <div class="col-sm-3"> <!-- Kolom grid untuk input tanggal lahir -->
+                    <label class="form-label">Birth Date</label> <!-- Label untuk input tanggal lahir -->
+                    <input type="date" class="form-control" name="birth date"> <!-- Input tanggal -->
                   </div>
                   
-                  <div class="col-sm-12" id="genderForm" style="display: none;">
-                    <label class="form-label">Gender</label>
-                    <input type="text" class="form-control" placeholder="Insert Other Gender" id="genderInput" value="none" name="gender" onchange="checkGender()">
+                  <div class="col-sm-12" id="genderForm" style="display: none;"> <!-- Kolom grid untuk input gender kustom, disembunyikan secara default -->
+                    <label class="form-label">Gender</label> <!-- Label untuk input gender kustom -->
+                    <input type="text" class="form-control" placeholder="Insert Other Gender" id="genderInput" value="none" name="gender" onchange="checkGender()"> <!-- Input teks untuk gender kustom -->
                   </div>
 
-                  <div class="col-sm-12">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" placeholder="Insert Email" name="email">
+                  <div class="col-sm-12"> <!-- Kolom grid untuk input email -->
+                    <label class="form-label">Email</label> <!-- Label untuk input email -->
+                    <input type="email" class="form-control" placeholder="Insert Email" name="email"> <!-- Input email -->
                 </div>
       
-                  <div class="col-sm-6">
-                    <label class="form-label">Address</label>
-                    <input type="text" class="form-control" placeholder="Insert Address" name="address">
+                  <div class="col-sm-6"> <!-- Kolom grid untuk input alamat -->
+                    <label class="form-label">Address</label> <!-- Label untuk input alamat -->
+                    <input type="text" class="form-control" placeholder="Insert Address" name="address"> <!-- Input teks untuk alamat -->
                   </div>
       
-                  <div class="col-sm-6">
-                    <label class="form-label">Phone Number</label>
-                    <input value="+62" type="tel" class="form-control" placeholder="+62xxxxxxxxxxx" name="phone number" onkeyup="checkPhone()" onkeypress="checkPhone()" onkeydown="checkPhone()">
+                  <div class="col-sm-6"> <!-- Kolom grid untuk input nomor telepon -->
+                    <label class="form-label">Phone Number</label> <!-- Label untuk input nomor telepon -->
+                    <input value="+62" type="tel" class="form-control" placeholder="+62xxxxxxxxxxx" name="phone number" onkeyup="checkPhone()" onkeypress="checkPhone()" onkeydown="checkPhone()"> <!-- Input nomor telepon dengan validasi -->
                   </div>
       
-                  <div class="col-12">
-                    <label class="form-label">Program of Interest</label>
-                    <select class="form-select" name="Program of Interest">
-                      <option disabled selected value="none">-- Pick Program --</option>
-                      <option>MAN (Management)</option>
-                      <option>IMT (Informatics)</option>
-                      <option>VCD (Visual Communication & Design)</option>
+                  <div class="col-12"> <!-- Kolom grid untuk pilihan program minat -->
+                    <label class="form-label">Program of Interest</label> <!-- Label untuk pilihan program minat -->
+                    <select class="form-select" name="Program of Interest"> <!-- Dropdown untuk memilih program -->
+                      <option disabled selected value="none">-- Pick Program --</option> <!-- Opsi default yang tidak dipilih -->
+                      <option>MAN (Management)</option> <!-- Opsi program Management -->
+                      <option>IMT (Informatics)</option> <!-- Opsi program Informatics -->
+                      <option>VCD (Visual Communication & Design)</option> <!-- Opsi program Visual Communication & Design -->
                     </select>
                   </div>
                   
-                  <div class="col-sm-6">
-                    <label class="form-label">Father's Name</label>
-                    <input type="text" class="form-control" placeholder="Insert Father's Name" name="father's name">
+                  <div class="col-sm-6"> <!-- Kolom grid untuk input nama ayah -->
+                    <label class="form-label">Father's Name</label> <!-- Label untuk input nama ayah -->
+                    <input type="text" class="form-control" placeholder="Insert Father's Name" name="father's name"> <!-- Input teks untuk nama ayah -->
                   </div>
       
-                  <div class="col-sm-6">
-                    <label class="form-label">Mother's Name</label>
-                    <input type="text" class="form-control" placeholder="Insert Mother's Name" name="mother's name">
+                  <div class="col-sm-6"> <!-- Kolom grid untuk input nama ibu -->
+                    <label class="form-label">Mother's Name</label> <!-- Label untuk input nama ibu -->
+                    <input type="text" class="form-control" placeholder="Insert Mother's Name" name="mother's name"> <!-- Input teks untuk nama ibu -->
                   </div>
 
-                  <div class="col-12">
-                    <label class="form-label">Image</label>
-                    <input type="file" class="form-control" name="image">
+                  <div class="col-12"> <!-- Kolom grid untuk input gambar -->
+                    <label class="form-label">Image</label> <!-- Label untuk input gambar -->
+                    <input type="file" class="form-control" name="image" onchange="imageInput()" accept="image/*"> <!-- Input file untuk gambar -->
                   </div>
       
-                  <input class="btn" type="submit" value="Submit" id="button"></input>
+                  <input class="btn" type="submit" value="Submit" id="button"></input> <!-- Tombol submit untuk mengirim form -->
               </form>
         </main>
       
-      <div id="outputDiv" style="display: none;">
-        <hr id="break-line">
-        <div id="output-container">
-          <h4>Output</h4>
-          <div class="output" id="displayDiv"></div>  
+      <div id="outputDiv" style="display: none;"> <!-- Kontainer untuk menampilkan output, disembunyikan secara default -->
+        <hr id="break-line"> <!-- Garis horizontal untuk estetika -->
+        <div id="output-container"> <!-- Kontainer untuk output -->
+          <h4>Output</h4> <!-- Judul untuk output -->
+          <div class="output" id="displayDiv"></div> <!-- Tempat untuk menampilkan output -->
         </div>
       </div>
         
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="themeMaleFemale.js"></script>
-    <script type="text/javascript" src="themeChange.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!-- Menghubungkan Bootstrap JS untuk fungsi JavaScript -->
+    <script type="text/javascript" src="script.js"></script> <!-- Menghubungkan file JavaScript eksternal -->
+    <script type="text/javascript" src="themeMaleFemale.js"></script> <!-- Menghubungkan file JavaScript eksternal untuk tema gender -->
+    <script type="text/javascript" src="themeChange.js"></script> <!-- Menghubungkan file JavaScript eksternal untuk mengubah tema -->
 </body>
 </html>

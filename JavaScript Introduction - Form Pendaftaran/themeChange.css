@@ -1,99 +1,99 @@
 /* Dark Theme */
 .body.dark {
-    background-color: #212529;
-    color: white;
+    background-color: #212529; /* Warna latar belakang untuk tema gelap */
+    color: white; /* Warna teks untuk tema gelap */
 }
 
 .body.dark input,
 .body.dark select,
 .body.dark input::file-selector-button {
-    --bs-focus-ring-color: rgba(var(--bs-light-rgb), .25)
+    --bs-focus-ring-color: rgba(var(--bs-light-rgb), .25) /* Warna fokus ring untuk input dan select */
 }
 
 .body.dark input,
 .body.dark select,
 .body.dark input:focus {
-    background-color: #212529;
-    color: white;
-    color-scheme: dark;
+    background-color: #212529; /* Warna latar belakang untuk input dan select pada tema gelap */
+    color: white; /* Warna teks untuk input dan select pada tema gelap */
+    color-scheme: dark; /* Skema warna untuk elemen input dan select */
 }
 
 .body.dark input::file-selector-button {
-    background-color: #2b3036 !important;
-    color: #ded7b8 !important;
+    background-color: #2b3036 !important; /* Warna latar belakang untuk tombol pemilih file pada tema gelap */
+    color: #ded7b8 !important; /* Warna teks untuk tombol pemilih file pada tema gelap */
 }
 
 .body.dark input::placeholder {
-    color: grey;
+    color: grey; /* Warna teks placeholder pada tema gelap */
 }
 
 .body.dark input::-ms-input-placeholder {
-    color: grey;
+    color: grey; /* Warna teks placeholder pada Internet Explorer */
 }
 
 .body.dark #container-card {
-    background-color: #1d1f21;
+    background-color: #1d1f21; /* Warna latar belakang untuk container card pada tema gelap */
 }
 
 .body.dark #button {
-    background-color: #292b2c;
-    border: 2px solid #3a444c;
+    background-color: #292b2c; /* Warna latar belakang untuk tombol pada tema gelap */
+    border: 2px solid #3a444c; /* Warna dan ketebalan border untuk tombol pada tema gelap */
 }
 
 .body.dark #break-line {
-    border: 3.5px solid #2d363b;
+    border: 3.5px solid #2d363b; /* Warna dan ketebalan border untuk garis pemisah pada tema gelap */
 }
 
 .body.dark #output-container {
-    border: 3px solid #2e8548;
+    border: 3px solid #2e8548; /* Warna dan ketebalan border untuk container output pada tema gelap */
 }
 
 /* Light Theme */
 .body.light {
-    background-color: #FFFFFF;
-    color: black;
+    background-color: #FFFFFF; /* Warna latar belakang untuk tema terang */
+    color: black; /* Warna teks untuk tema terang */
 }
 
 .body.light input,
 .body.light select,
 .body.light input::file-selector-button {
-    --bs-focus-ring-color: rgba(var(--bs-dark-rgb), .25)
+    --bs-focus-ring-color: rgba(var(--bs-dark-rgb), .25) /* Warna fokus ring untuk input dan select pada tema terang */
 }
 
 .body.light input,
 .body.light select,
 .body.light input:focus {
-    background-color: #DDDDDD;
-    color: black;
-    color-scheme: light;
+    background-color: #DDDDDD; /* Warna latar belakang untuk input dan select pada tema terang */
+    color: black; /* Warna teks untuk input dan select pada tema terang */
+    color-scheme: light; /* Skema warna untuk elemen input dan select */
 }
 
 .body.light input::file-selector-button {
-    background-color: #BBBBBB !important;
-    color: white !important;
+    background-color: #BBBBBB !important; /* Warna latar belakang untuk tombol pemilih file pada tema terang */
+    color: white !important; /* Warna teks untuk tombol pemilih file pada tema terang */
 }
 
 .body.light input::placeholder {
-    color: darkslategray;
+    color: darkslategray; /* Warna teks placeholder pada tema terang */
 }
 
 .body.light input::-ms-input-placeholder {
-    color: darkslategray;
+    color: darkslategray; /* Warna teks placeholder pada Internet Explorer */
 }
 
 .body.light #container-card {
-    background-color: #F0F0F0;
+    background-color: #F0F0F0; /* Warna latar belakang untuk container card pada tema terang */
 }
 
 .body.light #button {
-    background-color: #DDDDDD;
-    border: 2px solid #888888;
+    background-color: #DDDDDD; /* Warna latar belakang untuk tombol pada tema terang */
+    border: 2px solid #888888; /* Warna dan ketebalan border untuk tombol pada tema terang */
 }
 
 .body.light #break-line {
-    border: 3.5px solid #a9c3d1;
+    border: 3.5px solid #a9c3d1; /* Warna dan ketebalan border untuk garis pemisah pada tema terang */
 }
 
 .body.light #output-container {
-    border: 3px solid #a9c3d1;
+    border: 3px solid #a9c3d1; /* Warna dan ketebalan border untuk container output pada tema terang */
 }

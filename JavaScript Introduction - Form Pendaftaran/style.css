@@ -1,10 +1,13 @@
 /* Global CSS */
+
+/* Mengatur margin, padding, dan border-radius untuk container kartu */
 #container-card {
    margin: 30px;
    padding: 30px;
    border-radius: 10px;
 }
 
+/* Mengatur margin atas, lebar, tinggi, dan margin otomatis kiri dan kanan untuk tombol */
 #button {
    margin-top: 40px;
    width: 35%;
@@ -13,6 +16,7 @@
    margin-right: auto;
 }
 
+/* Mengatur opasitas, border-radius, lebar, dan margin untuk garis pemisah */
 #break-line {
    opacity: 100%;
    border-radius: 3.5px;
@@ -22,21 +26,25 @@
    margin-bottom: 50px;
 }
 
+/* Mengatur border-radius dan padding untuk kontainer output */
 #output-container {
    border-radius: 20px;
    padding: 15px;
 }
 
+/* Mengatur lebar tombol jenis kelamin menjadi 100% */
 .jeniskelamin-btn {
    width: 100%;
 }
 
+/* Mengatur warna border dan teks untuk tombol jenis kelamin 'Other' */
 .btn-outline-other,
 .btn-other {
    border-color: orange !important;
    color: orange;
 }
 
+/* Mengatur warna latar belakang, filter kecerahan, dan warna teks saat hover pada tombol jenis kelamin 'Other' */
 .btn-outline-other:hover,
 .btn-other {
    background-color: orange !important;
@@ -44,10 +52,17 @@
    color: white !important;
 }
 
+/* Mengatur warna latar belakang saat hover pada tombol jenis kelamin 'Other' */
 .btn-other:hover {
    background-color: rgb(216, 140, 0) !important;
 }
 
+/* Mengatur filter kecerahan saat hover pada tombol */
 #button:hover {
     filter: brightness(92.5%);
+}
+
+/* Mengatur warna tulisan pesan error */
+.alert-text {
+   color: rgba(255, 0, 0, 0.781);
 }
