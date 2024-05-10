@@ -40,7 +40,8 @@
    background-color: #1d1f21;
 }
 
-#default.dark #button {
+#default.dark #button, 
+#default.dark input[type=reset]{
    background-color: #292b2c;
    border: 2px solid #3a444c;
 }
@@ -90,7 +91,8 @@
    background-color: #F0F0F0;
 }
 
-#default.light #button {
+#default.light #button, 
+#default.light input[type=reset]{
    background-color: #DDDDDD;
    border: 2px solid #888888;
 }
@@ -144,7 +146,8 @@
    color: white;
 }
 
-#male #button {
+#male #button, 
+#male input[type=reset]{
    background-color: #178bc5;
    border: 2px solid #0183ee;
 }
@@ -198,7 +201,8 @@
    color: white;
 }
 
-#female #button {
+#female #button, 
+#female input[type=reset]{
    background-color: #c517ae;
    border: 2px solid #e601ee;
 }
@@ -258,7 +262,8 @@
    color: white;
 }
 
-#other #button {
+#other #button, 
+#other input[type=reset]{
    background: none;
    border: 2px solid #ffffff;
 }

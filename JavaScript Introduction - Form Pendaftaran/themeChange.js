@@ -34,5 +34,11 @@ function toLight(){
 }
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-    checkTheme();
+    // checkTheme();
+    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (darkThemeMq.matches) {
+      toDark()
+    } else {
+      toLight()
+    }
 });
