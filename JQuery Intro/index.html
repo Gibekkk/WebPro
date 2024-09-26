@@ -1,81 +1,115 @@
 <!DOCTYPE html> <!-- Mendefinisikan tipe dokumen sebagai HTML5 -->
 <html lang="en"> <!-- Mendefinisikan bahasa konten sebagai Inggris -->
+
 <head>
     <meta charset="UTF-8"> <!-- Mendefinisikan set karakter untuk dokumen sebagai UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mengatur viewport untuk responsif -->
     <title>Shapes JQuery</title> <!-- Judul halaman -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- Mengimpor jQuery dari CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Mengimpor jQuery dari CDN -->
     <style>
         /* Mengatur tampilan luar untuk kontainer bentuk */
         #shapeContainerWrapper {
-            width: 100%; /* Lebar penuh */
-            border: 2px solid grey; /* Batas berwarna abu-abu */
-            min-height: 80vh; /* Tinggi minimal 80% dari tinggi viewport */
-            height: fit-content; /* Tinggi sesuai dengan konten di dalamnya */
+            width: 100%;
+            /* Lebar penuh */
+            border: 2px solid grey;
+            /* Batas berwarna abu-abu */
+            min-height: 80vh;
+            /* Tinggi minimal 80% dari tinggi viewport */
+            height: fit-content;
+            /* Tinggi sesuai dengan konten di dalamnya */
         }
+
         /* Mengatur tampilan dalam untuk kontainer bentuk */
         #shapeContainer {
-            border: 2px solid grey; /* Batas berwarna abu-abu */
-            margin: 20px; /* Margin di semua sisi */
-            min-height: 100px; /* Tinggi minimal 100 piksel */
-            display: flex; /* Menggunakan flexbox untuk tata letak */
-            flex-wrap: wrap; /* Izinkan item membungkus ke baris berikutnya */
-            gap: 10px; /* Jarak antar item */
+            border: 2px solid grey;
+            /* Batas berwarna abu-abu */
+            margin: 20px;
+            /* Margin di semua sisi */
+            min-height: 102px;
+            /* Tinggi minimal 100 piksel */
+            display: flex;
+            /* Menggunakan flexbox untuk tata letak */
+            flex-wrap: wrap;
+            /* Izinkan item membungkus ke baris berikutnya */
+            gap: 10px;
+            /* Jarak antar item */
         }
+
         /* Mengatur tampilan untuk kontrol tambah dan hapus bentuk */
         #controls,
         #shapeControls {
-            width: 100%; /* Lebar penuh */
-            display: flex; /* Menggunakan flexbox untuk tata letak */
-            justify-content: center; /* Pusatkan item di dalamnya */
-            gap: 10px; /* Jarak antar item */
-            margin-top: 30px; /* Margin atas 30 piksel */
+            width: 100%;
+            /* Lebar penuh */
+            display: flex;
+            /* Menggunakan flexbox untuk tata letak */
+            justify-content: center;
+            /* Pusatkan item di dalamnya */
+            gap: 10px;
+            /* Jarak antar item */
+            margin-top: 30px;
+            /* Margin atas 30 piksel */
         }
 
         /* Efek hover untuk setiap bentuk */
         .shape:hover {
-            cursor: pointer; /* Ubah kursor menjadi pointer saat hover */
+            cursor: pointer;
+            /* Ubah kursor menjadi pointer saat hover */
+            border: 1px solid white !important;
+            /* Buat seluruh bentuk memiliki border putih */
+            -webkit-filter: invert(1);
+            filter: invert(1);
+            /* Ubah warna dengan invert saat hover */
+        }
+
+        /* Efek tombol untuk yang dimatikan */
+        button[disabled] {
+            cursor: not-allowed;
+            /* Ubah kursor menjadi tidak diizinkan saat hover */
         }
     </style>
 </head>
+
 <body>
     <!-- Kontainer luar untuk bentuk -->
     <div id="shapeContainerWrapper">
+        <!-- Kontrol untuk menambah dan menghapus bentuk -->
+        <div id="controls">
+            <button id="addShape">Add Shape</button> <!-- Tombol untuk menambah bentuk -->
+            <button id="removeShape">Remove Shape</button> <!-- Tombol untuk menghapus bentuk -->
+            <button id="removeAll">Remove All Shape</button> <!-- Tombol untuk menghapus semua bentuk -->
+        </div>
+        <!-- Kontrol untuk memilih jenis bentuk, warna, dan ukuran -->
+        <div id="shapeControls">
+            <select name="shapeType" id="shapeType"> <!-- Dropdown untuk memilih jenis bentuk -->
+                <option>Square</option> <!-- Opsi bentuk persegi -->
+                <option>Circle</option> <!-- Opsi bentuk lingkaran -->
+            </select>
+            <input type="color" id="shapeColor" style="min-width: 30px;"> <!-- Input untuk memilih warna -->
+            <input type="number" id="shapeSize" min="10" max="100" value="10" placeholder="Size, 10-100"
+                style="min-width: 90px;"> <!-- Input untuk menentukan ukuran -->
+        </div>
         <!-- Kontainer dalam untuk menampung bentuk-bentuk -->
         <div id="shapeContainer"></div>
-    </div>
-    <!-- Kontrol untuk menambah dan menghapus bentuk -->
-    <div id="controls">
-        <button id="addShape">Add Shape</button> <!-- Tombol untuk menambah bentuk -->
-        <button id="removeShape">Remove Shape</button> <!-- Tombol untuk menghapus bentuk -->
-    </div>
-    <!-- Kontrol untuk memilih jenis bentuk, warna, dan ukuran -->
-    <div id="shapeControls">
-        <select name="shapeType" id="shapeType"> <!-- Dropdown untuk memilih jenis bentuk -->
-            <option>Square</option> <!-- Opsi bentuk persegi -->
-            <option>Circle</option> <!-- Opsi bentuk lingkaran -->
-        </select>
-        <input type="color" id="shapeColor" style="min-width: 30px;"> <!-- Input untuk memilih warna -->
-        <input type="number" id="shapeSize" min="10" max="100" value="10" placeholder="Size, 10-100" style="min-width: 90px;"> <!-- Input untuk menentukan ukuran -->
     </div>
 
     <script>
         var addReady = true; // Flag untuk mengecek kesiapan menambah bentuk
         var removeReady = true; // Flag untuk mengecek kesiapan menghapus bentuk
-        $("#addShape").click(function() { // Event handler ketika tombol tambah diklik
-            if(addReady){ // Cek jika siap menambah
+        $("#addShape").click(function () { // Event handler ketika tombol tambah diklik
+            if (addReady) { // Cek jika siap menambah
                 addReady = false; // Setel flag menjadi tidak siap
                 var shapeSelect = $("#shapeType").val() // Ambil nilai jenis bentuk yang dipilih
                 var shapeList = ["Square", "Circle"]; // Daftar jenis bentuk yang valid
-                if(!shapeList.includes(shapeSelect)){ // Jika bentuk tidak valid
+                if (!shapeList.includes(shapeSelect)) { // Jika bentuk tidak valid
                     shapeSelect = "Square"; // Setel default ke 'Square'
                 }
 
                 var colorSelect = $("#shapeColor").val(); // Ambil nilai warna yang dipilih
-                var sizeSelect = parseInt($("#shapeSize").val()); // Ambil nilai ukuran yang dipilih dan konversi ke integer
-                if(sizeSelect < $("#shapeSize").attr("min")){ // Jika ukuran kurang dari minimum
+                var sizeSelect = parseInt($("#shapeSize").val()) || $("#shapeSize").attr("min"); // Ambil nilai ukuran yang dipilih dan konversi ke integer atau nilai minimum sebagai default
+                if (sizeSelect < $("#shapeSize").attr("min")) { // Jika ukuran kurang dari minimum
                     sizeSelect = $("#shapeSize").attr("min") // Setel ke minimum
-                } else if(sizeSelect > $("#shapeSize").attr("max")){ // Jika ukuran lebih dari maksimum
+                } else if (sizeSelect > $("#shapeSize").attr("max")) { // Jika ukuran lebih dari maksimum
                     sizeSelect = $("#shapeSize").attr("max") // Setel ke maksimum
                 }
 
@@ -83,20 +117,21 @@
             }
         });
 
-        function addShape(shapeType, shapeColor, shapeSize){ // Fungsi untuk menambah bentuk
+        function addShape(shapeType, shapeColor, shapeSize) { // Fungsi untuk menambah bentuk
             var borderRadius = (shapeType == "Square") ? "0" : "50%"; // Setel radius border berdasarkan jenis bentuk
             let newShape = $("<div></div>") // Buat elemen div baru
-            .addClass("shape") // Tambahkan kelas 'shape'
-            .css({ // Atur gaya CSS
-                borderRadius: borderRadius, // Setel radius border
-                width: shapeSize + "px", // Setel lebar
-                height: shapeSize + "px", // Setel tinggi
-                "background-color": shapeColor, // Setel warna latar
-                border: "1px solid black" // Setel border
-            });
+                .addClass("shape") // Tambahkan kelas 'shape'
+                .css({ // Atur gaya CSS
+                    borderRadius: borderRadius, // Setel radius border
+                    width: shapeSize + "px", // Setel lebar
+                    height: shapeSize + "px", // Setel tinggi
+                    "background-color": shapeColor, // Setel warna latar
+                    border: "1px solid black", // Setel border
+                    "z-index": $(".shape").length
+                });
 
             $("#shapeContainer").append(newShape); // Tambahkan bentuk baru ke kontainer
-            
+
             var shapeLeft = newShape.offset().left; // Ambil posisi kiri awal
             var shapeTop = newShape.offset().top; // Ambil posisi atas awal
             newShape.css({ // Atur posisi CSS
@@ -105,31 +140,49 @@
                 position: "absolute" // Setel posisi menjadi absolut
             });
 
-            newShape.css({ left: "-100px" }).animate({ left: shapeLeft }, 300, function () { // Animasi masuk dari kiri
+            newShape.css({ left: "-100px", opacity: 0 }).animate({ left: shapeLeft, opacity: 1 }, 300, function () { // Animasi masuk dari kiri
                 newShape.css({ // Setelah animasi selesai
                     position: "static" // Setel posisi menjadi statis
                 })
                 addReady = true; // Setel flag siap menambah menjadi true
+                checkShapeToRemove(); // Cek apakah masih ada shape yang bisa dihilangkan
             });
         }
 
-        $("#removeShape").click(function() { // Event handler ketika tombol hapus diklik
+        $("#removeShape").click(function () { // Event handler ketika tombol hapus diklik
             removeShape($(".shape:last")); // Panggil fungsi hapus untuk bentuk terakhir
         });
 
-        $('#shapeContainer').on('click', '.shape', function() { // Event handler ketika bentuk diklik
+        $("#removeAll").click(function () { // Event handler ketika tombol hapus semua diklik
+            removeShape($(".shape")); // Panggil fungsi hapus untuk semua bentuk
+        });
+
+        $('#shapeContainer').on('click', '.shape', function () { // Event handler ketika bentuk diklik
             removeShape($(this)); // Panggil fungsi hapus untuk bentuk yang diklik
         });
 
         function removeShape(shapeRemove) { // Fungsi untuk menghapus bentuk
-            if(removeReady && addReady){ // Cek jika siap menghapus dan tidak ada proses tambah yang berlangsung
+            if (removeReady && addReady) { // Cek jika siap menghapus dan tidak ada proses tambah yang berlangsung
                 removeReady = false; // Setel flag siap menghapus menjadi false
-                shapeRemove.fadeOut(300, function() { // Animasi fade out
+                shapeRemove.fadeOut(300, function () { // Animasi fade out
                     shapeRemove.remove(); // Hapus elemen setelah animasi
                     removeReady = true; // Setel flag siap menghapus menjadi true
+                    checkShapeToRemove(); // Cek apakah masih ada shape yang bisa dihilangkan
                 });
             }
         }
+
+        function checkShapeToRemove() { // Fungsi untuk menghilangkan dan memunculkan tombol hapus bentuk
+            if ($(".shape").length > 0) { // Cek apakah ada bentuk yang tersisa
+                $("#removeShape").prop('disabled', false); // Munculkan tombol jika ada
+                $("#removeAll").prop('disabled', false); // Munculkan tombol jika ada
+            } else { // Jika tidak ada bentuk yang tersisa
+                $("#removeShape").prop('disabled', true); // Hilangkan tombol jika tidak ada
+                $("#removeAll").prop('disabled', true); // Hilangkan tombol jika tidak ada
+            }
+        }
+        checkShapeToRemove(); // Menghilangkan tombol remove shape di awal
     </script>
 </body>
+
 </html>
